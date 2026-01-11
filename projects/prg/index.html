@@ -1,19 +1,256 @@
-<!DOCTYPE HTML>
-<html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>PRG</title>
-    <meta name="author" content="Junseok Oh">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
-  </head>
-  <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:20px">
-          <p class="name" style="text-align: center;">Testing</p>
-        </td>
-      </tr>
-    </tbody></table>
-  </body>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="Social Egocentric Head Gaze Prediction with Vision Embeddings Fused with Speaker Audio Language">
+  <meta name="keywords" content="Egocentric, Gaze Prediction, Multimodal, Social Interaction">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Social Egocentric Head Gaze Prediction with Vision Embeddings Fused with Speaker Audio Language</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../stylesheet.css">
+
+  <style>
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      background-color: #ffffff;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .title {
+      font-family: 'Google Sans', sans-serif;
+      font-size: 2.5em;
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .publication-authors {
+      font-family: 'Google Sans', sans-serif;
+      font-size: 1.2em;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .author-block {
+      display: inline-block;
+      margin-right: 15px;
+    }
+
+    .publication-venue {
+      font-family: 'Google Sans', sans-serif;
+      font-size: 1.1em;
+      text-align: center;
+      margin-bottom: 30px;
+      color: #555;
+    }
+
+    .teaser {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .teaser img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .abstract-container {
+      background-color: #f5f5f5;
+      padding: 30px;
+      border-radius: 15px;
+      margin-bottom: 30px;
+    }
+
+    .abstract-title {
+      font-family: 'Google Sans', sans-serif;
+      font-size: 1.8em;
+      text-align: center;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .abstract-text {
+      font-size: 1.1em;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    .section-title {
+      font-family: 'Google Sans', sans-serif;
+      font-size: 1.8em;
+      margin-top: 40px;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .bibtex {
+      background-color: #f0f0f0;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-family: monospace;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1 class="title">Social Egocentric Head Gaze Prediction with Vision Embeddings Fused with Speaker Audio Language
+    </h1>
+
+    <div class="publication-authors">
+      <span class="author-block">
+        <a href="../../../">Junseok Oh</a><sup>*</sup>,
+      </span>
+      <span class="author-block">
+        <a href="https://dongwonl.com">Dong Won Lee</a><sup>*</sup>,
+      </span>
+      <span class="author-block">
+        <a href="https://www.cs.cmu.edu/~morency/">Louis-Philippe Morency</a>,
+      </span>
+      <span class="author-block">
+        <a href="https://www.media.mit.edu/people/cynthiab/overview/">Cynthia Breazeal</a>,
+      </span>
+      <span class="author-block">
+        <a href="https://www.media.mit.edu/people/haewon/overview/">Hae Won Park</a>
+      </span>
+    </div>
+
+    <div class="publication-venue">
+      In Preparation
+    </div>
+
+    <div class="teaser">
+      <!-- Placeholder for the main figure. User said "this one", assuming ego-gaze.png or user will replace. -->
+      <img src="../../images/ego-gaze.png" alt="Main Figure">
+      <p style="margin-top: 10px; font-style: italic;">
+        Our multimodal framework predicts egocentric head-gaze by fusing visual, audio, and language cues.
+      </p>
+    </div>
+
+    <div class="abstract-container">
+      <h2 class="abstract-title">Abstract</h2>
+      <p class="abstract-text">
+        Predicting where a person will look in a dynamic social interaction requires understanding not only visual cues,
+        but also who is speaking, what is being said, and how conversational context unfolds over time. We present a
+        multimodal framework for real-time egocentric head-gaze forecasting that integrates visual, audio, and language
+        signals within a unified architecture. Our key insight is that naturally occurring egocentric human interaction
+        videos—when combined with spatially grounded speaker cues—provide a rich supervisory signal for anticipating
+        socially meaningful gaze behavior. To support large-scale training, we build a new 40+ hour conversation-centric
+        egocentric benchmark drawn from Aria, Ego4D, and EgoCom, and introduce a novel method for deriving frame-level
+        yaw–pitch gaze labels using point trajectories via video point tracking (i.e. CoTracker). This proxy supervision
+        correlates very closely with head-mounted IMU measurements, enabling scalable annotation without specialized
+        hardware. Our model fuses multimodal cues through a speaker-conditioned cross-attention mechanism that injects
+        audio–language features into localized visual regions, distinguishing egocentric speech (global attention) from
+        non-egocentric speakers (spatially localized attention) to predict short-horizon head-gaze trajectories suitable
+        for low-latency embodied applications. Across all datasets, our approach outperforms prior state-of-the-art
+        baselines and yields fine-grained improvements on socially relevant behaviors such as joint attention, mutual
+        gaze, and gaze shifts. Together, these results demonstrate a scalable, multimodal pathway toward socially
+        grounded real-time gaze anticipation for future embodied agents.
+      </p>
+    </div>
+
+    <div class="abstract-container">
+      <h2 class="abstract-title">Dataset</h2>
+      <p class="abstract-text">
+        We curate a <strong>40+ hour conversation-centric egocentric benchmark</strong> from three prominent datasets:
+        <strong>Aria</strong> (1.25h), <strong>Ego4D</strong> (5.9h), and <strong>EgoCom</strong> (35h). We filter for
+        <em>low-egomotion</em> clips and process them into 5-second segments for training.
+      </p>
+
+      <h3 style="font-family: 'Google Sans', sans-serif; font-size: 1.4em; margin-top: 25px; font-weight: bold;">Proxy
+        Head-Gaze Labels</h3>
+      <p class="abstract-text">
+        Most casual videos lack gaze annotations. We derive <em>proxy head-gaze</em> labels (yaw/pitch per frame) from
+        CoTracker point trajectories. Validated against Aria's IMU, this proxy achieves <strong>MAE 0.47° /
+          0.22°</strong> (yaw/pitch), enabling scalable supervision without specialized hardware.
+      </p>
+
+      <div style="text-align: center; margin: 25px 0;">
+        <img src="../../images/global_time_series.png" alt="Proxy vs IMU Validation"
+          style="max-width: 60%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <p style="font-style: italic; color: #666; margin-top: 8px;">Proxy head-gaze closely tracks ground-truth IMU
+          measurements.</p>
+      </div>
+
+      <h3 style="font-family: 'Google Sans', sans-serif; font-size: 1.4em; margin-top: 25px; font-weight: bold;">
+        Preprocessing Pipeline</h3>
+      <p class="abstract-text">
+        <strong>Vision:</strong> Face detection (InsightFace) + body detection (YOLOv11x) with stable ID tracking across
+        frames.<br>
+        <strong>Audio:</strong> Speaker diarization via WhisperX + pyannote to identify who is speaking when.
+      </p>
+    </div>
+
+    <div class="abstract-container">
+      <h2 class="abstract-title">Methods</h2>
+
+      <div style="text-align: center; margin: 20px 0;">
+        <img src="../../images/architecture.png" alt="Model Architecture"
+          style="max-width: 90%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <p style="font-style: italic; color: #666;">Our multimodal fusion architecture.</p>
+      </div>
+
+      <p class="abstract-text">
+        We fuse <strong>audio</strong> and <strong>language</strong> embeddings <em>into</em> the visual representation
+        of egocentric video. Speaker-aware features are projected into the spatial regions of active speakers, creating
+        multimodal representations that are then downsampled and decoded into gaze predictions (yaw, pitch).
+      </p>
+
+      <h3 style="font-family: 'Google Sans', sans-serif; font-size: 1.4em; margin-top: 25px; font-weight: bold;">
+        Multimodal Encoders</h3>
+      <p class="abstract-text">
+        <strong>Visual:</strong> Multi-Scale Vision Transformer (MViT) extracts spatiotemporal tokens from video.<br>
+        <strong>Audio:</strong> Log-spectrogram windows processed by a transformer encoder, aligned to visual
+        patches.<br>
+        <strong>Language:</strong> Frozen LLM encodes diarized transcripts, broadcast across spatial locations.
+      </p>
+
+      <h3 style="font-family: 'Google Sans', sans-serif; font-size: 1.4em; margin-top: 25px; font-weight: bold;">
+        Speaker-Conditioned Attention</h3>
+      <p class="abstract-text">
+        We apply <strong>masked cross-attention</strong> to inject audio-language cues into vision:
+      </p>
+      <ul style="list-style-type: disc; margin-left: 20px; font-size: 1.05em; line-height: 1.6;">
+        <li><strong>Egocentric speech → Global attention:</strong> The wearer's voice attends to all visual patches.
+        </li>
+        <li><strong>Other speakers → Localized attention:</strong> Features attend only to that speaker's spatial
+          region.</li>
+      </ul>
+      <p class="abstract-text" style="margin-top: 15px;">
+        Fused representations are passed through 3D convolutions and linear layers to predict short-horizon gaze
+        trajectories.
+      </p>
+    </div>
+
+    <!-- 
+  <div class="section">
+    <h2 class="section-title">BibTeX</h2>
+    <pre class="bibtex"><code>@article{oh2025social,
+  title={Social Egocentric Head Gaze Prediction with Vision Embeddings Fused with Speaker Audio Language},
+  author={Oh, Junseok and Lee, Dong Won and Morency, Louis-Philippe and Breazeal, Cynthia and Park, Hae Won},
+  journal={In Preparation},
+  year={2025}
+}</code></pre>
+  </div>
+  -->
+
+  </div>
+
+</body>
+
 </html>
