@@ -4,10 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-    content="Social Egocentric Head Gaze Prediction with Vision Embeddings Fused with Speaker Audio Language">
-  <meta name="keywords" content="Egocentric, Gaze Prediction, Multimodal, Social Interaction">
+    content="Real Time Open-Vocabulary Referential Gaze Control for Listening Robots">
+  <meta name="keywords" content="Referential Gaze Control, Open-Vocabulary, Multimodal Foundation Models, Listening Robots, Human-Robot Interaction">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Social Egocentric Head Gaze Prediction with Vision Embeddings Fused with Speaker Audio Language</title>
+  <title>Real Time Open-Vocabulary Referential Gaze Control for Listening Robots</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
@@ -21,55 +21,69 @@
     }
 
     .container {
-      max-width: 900px;
+      max-width: 960px;
       margin: 0 auto;
       padding: 20px;
     }
 
     .title {
       font-family: 'Google Sans', sans-serif;
-      font-size: 2.5em;
+      font-size: 2.3em;
       text-align: center;
       margin-bottom: 20px;
       font-weight: bold;
+      line-height: 1.25;
     }
 
     .publication-authors {
       font-family: 'Google Sans', sans-serif;
-      font-size: 1.2em;
+      font-size: 1.15em;
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 12px;
+      line-height: 1.6;
     }
 
     .author-block {
       display: inline-block;
-      margin-right: 15px;
+      margin-right: 12px;
+    }
+
+    .publication-affiliations {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.0em;
+      color: #555;
+      line-height: 1.6;
     }
 
     .publication-venue {
       font-family: 'Google Sans', sans-serif;
-      font-size: 1.1em;
+      font-size: 1.15em;
       text-align: center;
       margin-bottom: 30px;
-      color: #555;
+      color: #444;
+      font-weight: 500;
     }
 
     .teaser {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 35px;
     }
 
     .teaser img {
       max-width: 100%;
+      height: auto;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border: 1px solid #eaeaea;
     }
 
     .abstract-container {
-      background-color: #f5f5f5;
+      background-color: #f8f9fa;
       padding: 30px;
       border-radius: 15px;
       margin-bottom: 30px;
+      border: 1px solid #eeeeee;
     }
 
     .abstract-title {
@@ -81,9 +95,40 @@
     }
 
     .abstract-text {
-      font-size: 1.1em;
-      line-height: 1.6;
+      font-size: 1.05em;
+      line-height: 1.65;
       text-align: justify;
+      color: #333;
+    }
+
+    .key-points {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .point-card {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      border: 1px solid #e5e7eb;
+    }
+
+    .point-card h4 {
+      font-family: 'Google Sans', sans-serif;
+      font-size: 1.1em;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #111;
+    }
+
+    .point-card p {
+      font-size: 0.95em;
+      line-height: 1.5;
+      color: #555;
+      margin: 0;
     }
 
     .section-title {
@@ -95,12 +140,13 @@
     }
 
     .bibtex {
-      background-color: #f0f0f0;
+      background-color: #f5f5f5;
       padding: 15px;
-      border-radius: 5px;
+      border-radius: 8px;
       overflow-x: auto;
       font-family: monospace;
       font-size: 0.9em;
+      border: 1px solid #e0e0e0;
     }
   </style>
 </head>
@@ -109,145 +155,95 @@
 
   <div class="container">
 
-    <h1 class="title">Social Egocentric Head Gaze Prediction with Vision Embeddings Fused with Speaker Audio Language
-    </h1>
+    <h1 class="title">Real Time Open-Vocabulary Referential Gaze Control for Listening Robots</h1>
 
     <div class="publication-authors">
       <span class="author-block">
-        <a href="../../../">Junseok Oh</a><sup>*</sup>,
+        <a href="https://dongwonl.com" target="_blank" rel="noopener noreferrer">Dong Won Lee</a><sup>1</sup>,
       </span>
       <span class="author-block">
-        <a href="https://dongwonl.com">Dong Won Lee</a><sup>*</sup>,
+        <a href="../../">Junseok Oh</a><sup>2</sup>,
       </span>
       <span class="author-block">
-        <a href="https://www.cs.cmu.edu/~morency/">Louis-Philippe Morency</a>,
+        <a href="https://www.media.mit.edu/people/sgillet/overview/" target="_blank" rel="noopener noreferrer">Sarah Gillet</a><sup>1</sup>,
       </span>
       <span class="author-block">
-        <a href="https://www.media.mit.edu/people/cynthiab/overview/">Cynthia Breazeal</a>,
+        <a href="https://chahuja.com/" target="_blank" rel="noopener noreferrer">Chaitanya Ahuja</a><sup>3</sup>,
       </span>
       <span class="author-block">
-        <a href="https://www.media.mit.edu/people/haewon/overview/">Hae Won Park</a>
+        <a href="https://andretag.github.io/" target="_blank" rel="noopener noreferrer">Andrea Tagliabue</a><sup>4</sup>,
       </span>
+      <span class="author-block">
+        <a href="https://people.csail.mit.edu/yoonkim/" target="_blank" rel="noopener noreferrer">Yoon Kim</a><sup>5</sup>,
+      </span>
+      <span class="author-block">
+        <a href="https://www.cs.cmu.edu/~morency/" target="_blank" rel="noopener noreferrer">Louis-Philippe Morency</a><sup>3</sup>,
+      </span>
+      <span class="author-block">
+        <a href="https://www.media.mit.edu/people/cynthiab/overview/" target="_blank" rel="noopener noreferrer">Cynthia Breazeal</a><sup>1</sup>,
+      </span>
+      <span class="author-block">
+        <a href="https://www.media.mit.edu/people/haewon/overview/" target="_blank" rel="noopener noreferrer">Hae Won Park</a><sup>1</sup>
+      </span>
+    </div>
+
+    <div class="publication-affiliations">
+      <span class="affiliation-block"><sup>1</sup>MIT Media Lab</span>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+      <span class="affiliation-block"><sup>2</sup>University of Pennsylvania</span>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+      <span class="affiliation-block"><sup>3</sup>Carnegie Mellon University</span><br>
+      <span class="affiliation-block"><sup>4</sup>Amazon Robotics</span>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+      <span class="affiliation-block"><sup>5</sup>MIT EECS</span>
     </div>
 
     <div class="publication-venue">
-      In Preparation
+      <em>In Submission</em>
     </div>
 
     <div class="teaser">
-      <!-- Placeholder for the main figure. User said "this one", assuming ego-gaze.png or user will replace. -->
-      <img src="../../images/ego-gaze.png" alt="Main Figure">
-      <p style="margin-top: 10px; font-style: italic;">
-        Our multimodal framework predicts egocentric head-gaze by fusing visual, audio, and language cues.
+      <img src="../../images/referential-gaze.png" alt="Real Time Open-Vocabulary Referential Gaze Control Overview">
+      <p style="margin-top: 12px; font-style: italic; color: #555;">
+        Overview of our real-time open-vocabulary referential gaze control pipeline for listening robots.
       </p>
     </div>
 
     <div class="abstract-container">
       <h2 class="abstract-title">Abstract</h2>
       <p class="abstract-text">
-        Predicting where a person will look in a dynamic social interaction requires understanding not only visual cues,
-        but also who is speaking, what is being said, and how conversational context unfolds over time. We present a
-        multimodal framework for real-time egocentric head-gaze forecasting that integrates visual, audio, and language
-        signals within a unified architecture. Our key insight is that naturally occurring egocentric human interaction
-        videos—when combined with spatially grounded speaker cues—provide a rich supervisory signal for anticipating
-        socially meaningful gaze behavior. To support large-scale training, we build a new 40+ hour conversation-centric
-        egocentric benchmark drawn from Aria, Ego4D, and EgoCom, and introduce a novel method for deriving frame-level
-        yaw–pitch gaze labels using point trajectories via video point tracking (i.e. CoTracker). This proxy supervision
-        correlates very closely with head-mounted IMU measurements, enabling scalable annotation without specialized
-        hardware. Our model fuses multimodal cues through a speaker-conditioned cross-attention mechanism that injects
-        audio–language features into localized visual regions, distinguishing egocentric speech (global attention) from
-        non-egocentric speakers (spatially localized attention) to predict short-horizon head-gaze trajectories suitable
-        for low-latency embodied applications. Across all datasets, our approach outperforms prior state-of-the-art
-        baselines and yields fine-grained improvements on socially relevant behaviors such as joint attention, mutual
-        gaze, and gaze shifts. Together, these results demonstrate a scalable, multimodal pathway toward socially
-        grounded real-time gaze anticipation for future embodied agents.
+        While listening, a robot must infer from live streaming speech and visual context whether to shift gaze, what to look at, and where the referent is, within the timing constraints of natural interaction. We propose an approach which combines a multimodal foundation model and an object segmentation model for real time open vocabulary referential gaze control. To achieve fast inference without sacrificing performance, we distill a slow but capable teacher into a fast student using a novel privileged information distillation method with human egocentric videos. Across held-out egocentric data and a new out-of-distribution panoramic benchmark, our model significantly improves performance over the base student and matches that of the teacher. We measure inference time across edge-to-cloud hardware and observe that our trained model has significantly lower inference time and memory requirements. In a video-based human-subject study, our approach improves perceived message understanding, behavioral interdependence, referential attention, and competence. These results demonstrate a practical path toward real-time, open-vocabulary referential gaze control.
       </p>
     </div>
 
     <div class="abstract-container">
-      <h2 class="abstract-title">Dataset</h2>
-      <p class="abstract-text">
-        We curate a <strong>40+ hour conversation-centric egocentric benchmark</strong> from three prominent datasets:
-        <strong>Aria</strong> (1.25h), <strong>Ego4D</strong> (5.9h), and <strong>EgoCom</strong> (35h). We filter for
-        <em>low-egomotion</em> clips and process them into 5-second segments for training.
-      </p>
-
-      <h3 style="font-family: 'Google Sans', sans-serif; font-size: 1.4em; margin-top: 25px; font-weight: bold;">Proxy
-        Head-Gaze Labels</h3>
-      <p class="abstract-text">
-        Most casual videos lack gaze annotations. We derive <em>proxy head-gaze</em> labels (yaw/pitch per frame) from
-        CoTracker point trajectories. Validated against Aria's IMU, this proxy achieves <strong>MAE 0.47° /
-          0.22°</strong> (yaw/pitch), enabling scalable supervision without specialized hardware.
-      </p>
-
-      <div style="text-align: center; margin: 25px 0;">
-        <img src="../../images/global_time_series.png" alt="Proxy vs IMU Validation"
-          style="max-width: 60%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-        <p style="font-style: italic; color: #666; margin-top: 8px;">Proxy head-gaze closely tracks ground-truth IMU
-          measurements.</p>
+      <h2 class="abstract-title">Overview & Contributions</h2>
+      <div class="key-points">
+        <div class="point-card">
+          <h4>Multimodal Foundation Model & Segmentation</h4>
+          <p>Combines streaming speech understanding (e.g., Gemma-4) and open-vocabulary object segmentation (e.g., SAM3) to anticipate referential gaze shifts toward indirect and direct targets.</p>
+        </div>
+        <div class="point-card">
+          <h4>Privileged Information Distillation</h4>
+          <p>Distills a slow but high-capacity teacher into a fast student network using egocentric video supervision, matching teacher accuracy while dramatically slashing compute latency.</p>
+        </div>
+        <div class="point-card">
+          <h4>Real-Time Edge Deployment</h4>
+          <p>Optimized for edge-to-cloud hardware to ensure latency meets natural interaction constraints (< ~400ms after noun onset) on physical robotic platforms.</p>
+        </div>
+        <div class="point-card">
+          <h4>Human-Subject Validation</h4>
+          <p>Demonstrates statistically significant improvements in perceived message understanding, behavioral interdependence, referential attention, and robot competence in user studies.</p>
+        </div>
       </div>
-
-      <h3 style="font-family: 'Google Sans', sans-serif; font-size: 1.4em; margin-top: 25px; font-weight: bold;">
-        Preprocessing Pipeline</h3>
-      <p class="abstract-text">
-        <strong>Vision:</strong> Face detection (InsightFace) + body detection (YOLOv11x) with stable ID tracking across
-        frames.<br>
-        <strong>Audio:</strong> Speaker diarization via WhisperX + pyannote to identify who is speaking when.
-      </p>
     </div>
 
-    <div class="abstract-container">
-      <h2 class="abstract-title">Methods</h2>
-
-      <div style="text-align: center; margin: 20px 0;">
-        <img src="../../images/architecture.png" alt="Model Architecture"
-          style="max-width: 90%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-        <p style="font-style: italic; color: #666;">Our multimodal fusion architecture.</p>
-      </div>
-
-      <p class="abstract-text">
-        We fuse <strong>audio</strong> and <strong>language</strong> embeddings <em>into</em> the visual representation
-        of egocentric video. Speaker-aware features are projected into the spatial regions of active speakers, creating
-        multimodal representations that are then downsampled and decoded into gaze predictions (yaw, pitch).
-      </p>
-
-      <h3 style="font-family: 'Google Sans', sans-serif; font-size: 1.4em; margin-top: 25px; font-weight: bold;">
-        Multimodal Encoders</h3>
-      <p class="abstract-text">
-        <strong>Visual:</strong> Multi-Scale Vision Transformer (MViT) extracts spatiotemporal tokens from video.<br>
-        <strong>Audio:</strong> Log-spectrogram windows processed by a transformer encoder, aligned to visual
-        patches.<br>
-        <strong>Language:</strong> Frozen LLM encodes diarized transcripts, broadcast across spatial locations.
-      </p>
-
-      <h3 style="font-family: 'Google Sans', sans-serif; font-size: 1.4em; margin-top: 25px; font-weight: bold;">
-        Speaker-Conditioned Attention</h3>
-      <p class="abstract-text">
-        We apply <strong>masked cross-attention</strong> to inject audio-language cues into vision:
-      </p>
-      <ul style="list-style-type: disc; margin-left: 20px; font-size: 1.05em; line-height: 1.6;">
-        <li><strong>Egocentric speech → Global attention:</strong> The wearer's voice attends to all visual patches.
-        </li>
-        <li><strong>Other speakers → Localized attention:</strong> Features attend only to that speaker's spatial
-          region.</li>
-      </ul>
-      <p class="abstract-text" style="margin-top: 15px;">
-        Fused representations are passed through 3D convolutions and linear layers to predict short-horizon gaze
-        trajectories.
-      </p>
-    </div>
-
-    <!-- 
-  <div class="section">
-    <h2 class="section-title">BibTeX</h2>
-    <pre class="bibtex"><code>@article{oh2025social,
-  title={Social Egocentric Head Gaze Prediction with Vision Embeddings Fused with Speaker Audio Language},
-  author={Oh, Junseok and Lee, Dong Won and Morency, Louis-Philippe and Breazeal, Cynthia and Park, Hae Won},
-  journal={In Preparation},
-  year={2025}
+    <div class="section">
+      <h2 class="section-title">BibTeX</h2>
+      <pre class="bibtex"><code>@inproceedings{lee2027realtime,
+  title={Real Time Open-Vocabulary Referential Gaze Control for Listening Robots},
+  author={Lee, Dong Won and Oh, Junseok and Gillet, Sarah and Ahuja, Chaitanya and Tagliabue, Andrea and Kim, Yoon and Morency, Louis-Philippe and Breazeal, Cynthia and Park, Hae Won},
+  booktitle={In Submission},
+  year={2027}
 }</code></pre>
-  </div>
-  -->
+    </div>
 
   </div>
 
